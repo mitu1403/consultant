@@ -1,0 +1,216 @@
+@font-face {
+  font-family: oswaldReg;
+  src: url(../fonts/Oswald-Regular.ttf);
+}
+
+*{
+  font-family: oswaldReg;
+  letter-spacing: .05rem;
+}
+/*  Necessery Classes  */
+.float-left{ float: left; }
+.bg-color1{ background-color: #0e3e7f;}
+.bg-color2{ background-color: #eaf2fd;}
+.paragraph{ 
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
+}
+.h-320{ height: 320px;}
+.h-400{ height: 350px;}
+.heading-1{
+  font-size: 3.75rem;
+  line-height: 1.1;
+}
+.display-block{ display: block; }
+
+nav { background-color: #fdfdfd; }
+.nav-logo{
+  font-size: 2rem;
+  color: #35393f !important;
+}
+
+.hero-section{
+  background-image: url(../image/1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 86.5vh;  
+}
+.hero-section h1{
+  font-size: 4.5rem;
+  color: #2a405e;
+  line-height: 1.1;
+}
+.hero-section .hero-col { margin-top: 12%;}
+.hero-section a, .experience-section a{
+  font-size: .8rem;
+  letter-spacing: .1rem;
+}
+.hero-section .btn1{
+  background-color: #adccf6 ;
+  color: #35393f ;
+}
+.hero-section .btn2, .experience-section .btn2{
+  background-color: #0d3872;
+  color: #eaf2fd ;
+}
+
+.financial-adviser h3{
+  font-size: 1.875rem;
+  line-height: 1.5;
+}
+.financial-adviser p{ color: #cdd7e5; }
+
+.capacity-section p{ color: #5f738d;}
+.capacity-section h2{
+  font-size: 2.25rem;
+  line-height: 1.1;
+}
+
+.counter-section{
+  background-image: url(../image/5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #c4d4ea;
+}
+.counter-section h2{ font-size: 2.25rem; }
+.counter-section h1{ font-size: 4.5rem; }
+.inner-bg{  
+  background-color: rgba(14,62,127,0.85);
+  height: 100%;
+}
+
+.bg-experience{
+  background-image: url(../image/6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.experience-section h1{
+  font-size: 3.75rem;
+  line-height: 1.1;
+  color: #c4d4ea;  
+}
+.experience-section p{  
+  color: #5f738d;
+  text-align: justify;
+  font-weight: 100;
+}
+
+.about-section{ 
+  color: #0e337f;
+  background-color: #eaf2fd;
+}
+.about-section p{ color: #5f798d;}
+.about-section a{ 
+  color: #303339;
+}
+
+.line{
+  background-color: #0e3e7f;
+  height: 3px;
+  width: 5.5%;
+}
+.button-line{
+  height: 2px;
+  width: 25%;
+  background-color: #81a2d0;
+}
+
+.team-section{
+  background-image: url("../image/7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.team-section h1{ color: #fdfdfd;}
+.team-section p{ color: #cdd7e5;}
+.team-section h5{ 
+  color: #0e3e7f;
+  line-height: 1.2;
+  font-size: 1.25;
+}
+.team-section h6{
+  color: #35395f;
+  line-height: 1.2;
+  font-size: 1.125;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+}
+.team-body{
+  position: relative;
+  background-color: white;
+  width: 100%;
+  bottom: 0;
+  right: 0;  
+  top: -20px; 
+}
+
+.info-section h3{
+  font-size: 1.875rem;
+  line-height: 1.2;  
+  color: #35393f;
+}
+.info-section p a{ font-family: "Open Sans", sans-serif;}
+.info-col-3{
+  background-image: url(../image/11.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.info-section form button{
+  background-color: #0d3872;
+  color: #eaf2fd ;
+  letter-spacing: .1rem;
+  font-size: .9rem;
+}
+
+footer{ color: #fdfdfd;}
+footer h3{
+  font-size: 1.875rem;
+  line-height: 1.2;  
+}
+footer a{ color: #fdfdfd;}
+footer a i{ font-size: 1.3rem;}
+footer p{
+  color: #cdd7e5;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+@media screen and (min-width:1400px) {
+  .hero-section h1{ font-size: 5rem;  }
+}
+/* XL */
+@media screen and (max-width:1200px) {
+  .hero-section h1{ font-size: 3.5rem;  }
+}
+/* LG */
+@media screen and (max-width:992px) {  
+  .hero-section h1{ font-size: 3rem;  }
+  .hero-section .hero-col { margin-top: 20%;}
+}
+
+@media screen and (max-width:768px) {
+  .bg-experience{ height: 50vh; }
+
+  .info-col-3{ height: 80vh;}
+  
+  .counter-section h2{ font-size: 2rem; }
+
+  .experience-section h1{
+    font-size: 3.2rem;     
+  }  
+}
+
+@media screen and (max-width:576px) {
+  .h-320{height:250px;}
+
+  .hero-section{ background-position: left; }
+  .hero-section h1{ font-size: 2.3rem;  }
+  .hero-section .hero-col { margin-top: 35%;}
+
+  .financial-adviser h3{ font-size: 1.5rem; }
+}
