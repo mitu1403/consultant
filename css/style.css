@@ -2,7 +2,9 @@
   font-family: oswaldReg;
   src: url(../fonts/Oswald-Regular.ttf);
 }
-
+html{
+  scroll-behavior: smooth;
+}
 *{
   font-family: oswaldReg;
   letter-spacing: .05rem;
@@ -50,10 +52,20 @@ nav { background-color: #fdfdfd; }
 .hero-section .btn1{
   background-color: #adccf6 ;
   color: #35393f ;
+  transition: all .5s ease-in-out;
+}
+.hero-section .btn1:hover{
+  color: #adccf6 ;
+  background-color: #35393f ;
 }
 .hero-section .btn2, .experience-section .btn2{
   background-color: #0d3872;
   color: #eaf2fd ;
+  transition: all .5s ease-in-out;
+}
+.hero-section .btn2:hover, .experience-section .btn2:hover{
+  color: #0d3872;
+  background-color: #eaf2fd ;
 }
 
 .financial-adviser h3{
@@ -61,11 +73,31 @@ nav { background-color: #fdfdfd; }
   line-height: 1.5;
 }
 .financial-adviser p{ color: #cdd7e5; }
-
+.financial-adviser .btn3{ transition: all .5s ease-in-out;}
+.financial-adviser .btn3:hover{
+  background-color: #0e3e7f;
+  color: #cdd7e5;
+}
 .capacity-section p{ color: #5f738d;}
 .capacity-section h2{
   font-size: 2.25rem;
   line-height: 1.1;
+}
+
+.capacity-section .layer{
+  transition-duration: .5s;
+  transition-property:height;
+  height: 0;
+  width: 100%;
+  background-color: rgba(14, 62, 127,0.1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.capacity-section .card:hover .layer{
+  background-color:rgba(14, 62, 127,0.03);
+  height: 191px;
+  transition-timing-function: linear;
 }
 
 .counter-section{
@@ -106,6 +138,21 @@ nav { background-color: #fdfdfd; }
 .about-section p{ color: #5f798d;}
 .about-section a{ 
   color: #303339;
+}
+.about-section .layer{
+  transition-duration: .5s;
+  transition-property:height;
+  height: 0;
+  width: 100%;
+  background-color: rgba(14, 62, 127,0.05);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.about-section .card:hover .layer{
+  background-color:rgba(14, 62, 127,0.05);
+  height: 100%;
+  transition-timing-function: linear;
 }
 
 .line{
@@ -173,7 +220,17 @@ footer h3{
   line-height: 1.2;  
 }
 footer a{ color: #fdfdfd;}
-footer a i{ font-size: 1.3rem;}
+footer a i{
+  font-size: 1.3rem;
+  transition: 0.7s ease-in-out all;
+  transform: scale(1);
+}
+footer a i:hover{ transform: scale(1.4);
+  text-shadow:
+          0 0 5px rgb(255, 255, 255, .2),
+          0 0 10px rgb(255, 255, 255, .2),
+          0 0 20px rgb(255, 255, 255, .2),
+          0 0 30px rgb(255, 255, 255, .2);}
 footer p{
   color: #cdd7e5;
   font-style: italic;
@@ -213,4 +270,41 @@ footer p{
   .hero-section .hero-col { margin-top: 35%;}
 
   .financial-adviser h3{ font-size: 1.5rem; }
+}
+
+nav span {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+nav span:before, span:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 100%;
+  margin-top: -0.5px;
+  background: #0e3e7f;
+}
+
+nav span:before {
+  left: -2.5px;
+}
+nav span:after {
+  right: 2.5px;
+  background: #0e3e7f;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+nav span:hover:before {
+  background: #0e3e7f;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+nav span:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
 }
